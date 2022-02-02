@@ -1,0 +1,4 @@
+2022-02-01
+==========
+1 - Revised a Design Pattern
+2 - Revised a SOLID Principle
