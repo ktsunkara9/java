@@ -5,11 +5,26 @@ public class FunctionalInterfaceApp {
 	public static void main(String[] args) {
 
 		IFunctionalInterface i = () -> System.out.println("demo");
+		IFunctionalInterface i1 = () -> {
+			
+		};
 		i.print();
+		i1.print();
 		IFunctionalInterface.staticPrint();
+		
+		I2 i2 = (a,b) -> {
+			return a+b;
+		};
+		i2.add(3,4);
+		I2 i3 = (a,b) -> a+b;
+		i3.add(3, 4);
 	}
 	
+}
 
+@FunctionalInterface
+interface I2 {
+	public abstract int add(int a,int b);
 }
 
 @FunctionalInterface

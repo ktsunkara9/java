@@ -20,6 +20,7 @@ public class DemoApp {
 		list.add(93);
 		
 		Integer[] i = list.stream().toArray(Integer[]::new);
+		System.out.println(i);
 
 		long numFailed = list.stream().filter(m -> m < 35).count();
 		System.out.println(numFailed);
