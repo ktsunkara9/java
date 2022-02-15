@@ -36,6 +36,10 @@ public class ReduceDemo {
 		double avgSalary = employees.stream().filter(e -> e.getSalary() > 6000).map(e -> e.getSalary())
 				.mapToDouble(i -> i).average().getAsDouble();
 		System.out.println("avgSalary : " + avgSalary);
+
+		long sumofSalaries = employees.stream().map(e -> e.getSalary()).mapToLong(i -> i).reduce(0,
+				(sal1, sal2) -> sal1 + sal2);
+		System.out.println("sumofSalaries : " + sumofSalaries);
 	}
 
 }
