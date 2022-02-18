@@ -1,6 +1,5 @@
 package inc.skt.practice;
 
-import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
@@ -13,7 +12,7 @@ public class Practice1 {
 
 	public static void main(String[] args) {
 
-		List<Employee> employees = getEmployees();
+		List<Employee> employees = Employee.getEmployees();
 
 		System.out.println("===================Employees in each department==========================================");
 		Map<String, List<Employee>> empGroupByDepartment = employees.stream()
@@ -69,21 +68,12 @@ public class Practice1 {
 		});
 		System.out.println("minEmployee:  "+minEmployee.get() + " - " + minEmployee.get().getSal());
 
-		System.out.println("===================Max Employee Salary from Each Department =============================");
+		System.out.println("===================Max Employee Salary from Each Department=============================");
 		Map<String, Optional<Employee>> maxSalEmpGroupByDepartment = employees.stream().collect(Collectors
 				.groupingBy(Employee::getDepartment, Collectors.reducing(BinaryOperator.maxBy(salComparator))));
 
 		maxSalEmpGroupByDepartment.entrySet()
 				.forEach(entry -> System.out.println(entry.getKey() + " - " + entry.getValue().get()));
-	}
-
-	public static List<Employee> getEmployees() {
-		return Arrays.asList(new Employee(1, "Krishna", "IT", false, 23000), new Employee(1, "Teja", "IT", true, 17000),
-				new Employee(1, "Sunkara", "Software", false, 10000),
-				new Employee(1, "Nagarjuna", "Postal", true, 3000), new Employee(1, "Divakar", "Banking", true, 6000),
-				new Employee(1, "Ram", "Banking", false, 2000), new Employee(1, "Suresh", "Software", true, 16000),
-				new Employee(1, "Sai", "IT", true, 12000), new Employee(1, "Murali", "Banking", true, 3500),
-				new Employee(1, "Naveen", "Software", true, 11000), new Employee(1, "Venu", "Postal", false, 2300));
 	}
 
 }
