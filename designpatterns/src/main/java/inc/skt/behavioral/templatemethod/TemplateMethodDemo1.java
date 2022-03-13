@@ -1,4 +1,4 @@
-package inc.skt.patterns.templatemethod;
+package inc.skt.behavioral.templatemethod;
 
 import java.util.Random;
 

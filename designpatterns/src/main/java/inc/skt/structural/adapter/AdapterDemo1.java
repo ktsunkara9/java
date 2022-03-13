@@ -1,4 +1,4 @@
-package inc.skt.patterns.adapter;
+package inc.skt.structural.adapter;
 
 public class AdapterDemo1 {
 
