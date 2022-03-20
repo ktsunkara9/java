@@ -1,4 +1,4 @@
-package inc.skt.structural.factorymethod;
+package inc.skt.creational.factorymethod;
 
 public class Demo1 {
 
