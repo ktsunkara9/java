@@ -30,7 +30,8 @@ public class ConsumerInterfaceDemo {
         }));
     }
     public static void main(String[] args) {
-        Consumer<String> consumer = (s) -> System.out.println(s.toUpperCase());
+        String sign= "skt";
+        Consumer<String> consumer = (s) -> System.out.println(s.toUpperCase() + sign);
         consumer.accept("skt");
 
         // print names of all students

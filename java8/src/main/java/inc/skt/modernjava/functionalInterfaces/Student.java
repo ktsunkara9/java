@@ -14,6 +14,15 @@ public class Student {
     public Student() {
     }
 
+    public Student(String name) {
+        this.name = name;
+    }
+
+    public Student(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+    }
+
     public Student(String name, int grade, float gpa, String gender) {
         this.name = name;
         this.grade = grade;
