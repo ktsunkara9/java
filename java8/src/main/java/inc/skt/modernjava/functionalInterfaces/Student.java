@@ -1,7 +1,10 @@
 package inc.skt.modernjava.functionalInterfaces;
 
+import inc.skt.modernjava.optionals.Bike;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Student {
 
@@ -9,20 +12,12 @@ public class Student {
     private int grade;
     private float gpa;
     private String gender;
-
-    public int getNoteBooks() {
-        return noteBooks;
-    }
-
-    public void setNoteBooks(int noteBooks) {
-        this.noteBooks = noteBooks;
-    }
-
     private int noteBooks;
     List<String> activities = new ArrayList<>();
 
-    public Student() {
-    }
+    private Optional<Bike> bike = Optional.empty();
+
+    public Student() {}
 
     public Student(String name) {
         this.name = name;
@@ -89,12 +84,27 @@ public class Student {
         this.gender = gender;
     }
 
+    public int getNoteBooks() {
+        return noteBooks;
+    }
+
+    public void setNoteBooks(int noteBooks) {
+        this.noteBooks = noteBooks;
+    }
     public List<String> getActivities() {
         return activities;
     }
 
     public void setActivities(List<String> activities) {
         this.activities = activities;
+    }
+
+    public Optional<Bike> getBike() {
+        return bike;
+    }
+
+    public void setBike(Optional<Bike> bike) {
+        this.bike = bike;
     }
 
     @Override
