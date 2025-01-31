@@ -5,3 +5,8 @@
 .settings/*
 /.metadata/
 .nppBackup/
+
+.*/.settings
+.*/.settings/*
+.*/.project
+.*/.classpath
