@@ -2,7 +2,7 @@ package inc.skt.statements;
 
 import java.util.Scanner;
 
-public class SwitchDemo {
+public class SwitchDemo1 {
 
 	public static void main(String[] args) {
 
