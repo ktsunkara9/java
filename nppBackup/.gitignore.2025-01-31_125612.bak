@@ -6,7 +6,7 @@
 /.metadata/
 .nppBackup/
 
-*/.settings
-*/.settings/*
-*/.project
-*/.classpath
+.*/.settings
+.*/.settings/*
+.*/.project
+.*/.classpath
