@@ -16,7 +16,6 @@ public class MoveZeros {
 
 	private static int[] moveZerosToEndInPlace(int[] nums) {
 		int nonZeroStorageIndex = 0;
-
 		for (int i = 0; i < nums.length; i++) {
 			if (nums[i] != 0) {
 				int temp = nums[i];
@@ -25,7 +24,6 @@ public class MoveZeros {
 				nonZeroStorageIndex++;
 			}
 		}
-
 		return nums;
 	}
 
