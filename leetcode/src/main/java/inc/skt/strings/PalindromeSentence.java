@@ -19,9 +19,9 @@ public class PalindromeSentence {
 		
 		s = s.toLowerCase().replaceAll("[^a-zA-Z0-9]", "");
 		
-		StringBuilder reversedString = new StringBuilder(s);
-		reversedString.reverse();
-		if(s.equals(reversedString.toString()))
+		StringBuilder stringBuilder = new StringBuilder(s);
+		stringBuilder.reverse();
+		if(s.equals(stringBuilder.toString()))
 			return true;
 		return false;
 	}
